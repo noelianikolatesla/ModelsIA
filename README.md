@@ -1,37 +1,66 @@
-# 🤖 ModelsIA: Explorando la Inteligencia Artificial
+# Unidad: El concepto de Modelo en la Inteligencia Artificial (IA)
 
-Bienvenido a **ModelsIA**, un espacio dedicado a la implementación y experimentación con diferentes arquitecturas de Inteligencia Artificial. Este repositorio recopila mis avances en el aprendizaje de modelos de lenguaje, visión artificial y sistemas basados en redes neuronales.
-
-
-
-## 🚀 Objetivo del Repositorio
-El propósito de este proyecto es documentar el uso de librerías estándar de la industria (como **NLTK, spaCy y Hugging Face**) y la aplicación de técnicas avanzadas como el *Fine-tuning* en modelos fundacionales a través de plataformas como **AWS Bedrock**.
-
-## 📂 Estructura del Proyecto
-
-El repositorio está organizado por módulos temáticos:
-
-* **[`/procesamiento-de-texto`](./procesamiento-de-texto):** Análisis lingüístico, tokenización, lematización y extracción de entidades (NER) utilizando Python.
-* **`/modelos-fundacionales`**: (Próximamente) Prácticas de ajuste de modelos y gestión de *guardrails*.
-* **`/clasificacion-datos`**: (Próximamente) Implementación de modelos estadísticos y aprendizaje profundo.
-
-## 🛠️ Stack Tecnológico
-- **Lenguaje:** Python 3.x
-- **Librerías de PLN:** NLTK, spaCy, TextBlob.
-- **Modelos:** Transformers (BERT, GPT), Word Embeddings (Word2Vec).
-- **Entornos:** Jupyter Notebooks, Google Colab y AWS Bedrock.
-
-
-
-## 📈 Conceptos Implementados
-A lo largo de los ejercicios en este repo, se aplican conceptos críticos para cualquier ingeniero de IA:
-1.  **Limpieza de Corpus:** Normalización de texto y eliminación de ruido.
-2.  **Análisis Sintáctico y Semántico:** Clasificación POS y relaciones entre palabras.
-3.  **Extracción de Información:** Identificación de patrones y bigramas significativos mediante *likelihood ratio*.
-4.  **Optimización:** Comparativa de rendimiento entre diferentes motores de procesamiento.
-
-## 💻 Cómo explorar los proyectos
-Cada carpeta contiene su propio archivo `README.md` con instrucciones específicas de instalación y ejecución. La mayoría de los proyectos están diseñados para ejecutarse directamente como Notebooks para facilitar la visualización de resultados paso a paso.
+En esta unidad exploramos el concepto de **modelo** en el campo de la Inteligencia Artificial (IA). Analizamos su definición, los tipos de modelos existentes (simbólicos vs. basados en datos) y cómo se representa el conocimiento para resolver problemas complejos de manera automatizada.
 
 ---
-*Desarrollado con fines educativos y profesionales por [noelianikolatesla](https://github.com/noelianikolatesla)*
+
+### 1. ¿Qué es un Modelo?
+Un **modelo** es una representación simplificada de un sistema que nos permite analizarlo y realizar predicciones. En IA, es una estructura matemática que captura las relaciones entre datos de entrada y salidas.
+
+* **Modelo vs. Algoritmo**: El algoritmo es el conjunto de pasos (las "instrucciones"), mientras que el modelo es el resultado del conocimiento adquirido (el "saber hacer").
+
+#### Clasificación principal:
+* **Modelos Entrenados (IA basada en datos)**: Aprenden mediante Machine Learning o Deep Learning ajustando parámetros (ej: redes neuronales).
+* **Modelos No Entrenados (IA simbólica)**: Se basan en reglas y conocimientos predefinidos por expertos (ej: Sistemas Expertos).
+
+---
+
+### 2. Tipos de Aprendizaje Automático
+Dentro de los modelos entrenados, encontramos tres enfoques principales:
+1.  **Supervisado**: Entrenado con datos etiquetados (Clasificación y Regresión).
+2.  **No supervisado**: Busca patrones ocultos sin etiquetas (Clustering o agrupamiento).
+3.  **Por refuerzo**: El agente aprende mediante un sistema de recompensas y castigos.
+
+---
+
+### 3. Representación del Conocimiento: La Jerarquía DIKW
+Para que una máquina "entienda", debemos procesar la información según diferentes niveles de profundidad:
+
+1.  **Datos (Data)**: Hechos brutos sin contexto (ej: "38").
+2.  **Información (Information)**: Datos con contexto (ej: "La temperatura corporal es de 38ºC").
+3.  **Conocimiento (Knowledge)**: Aplicación de reglas (ej: "38ºC indica fiebre").
+4.  **Sabiduría (Wisdom)**: Metaconocimiento y toma de decisiones éticas (ej: "Hay que ir al médico").
+
+---
+
+### 4. Sistemas Basados en Reglas (SBR)
+Son modelos que utilizan reglas explícitas (**Si... entonces...**) para tomar decisiones. Sus componentes son:
+
+* **Base de conocimiento**: El conjunto de reglas `IF-THEN`.
+* **Base de hechos**: La memoria activa con la situación actual.
+* **Motor de inferencia**: El "cerebro" que aplica las reglas.
+    * **Encadenamiento hacia adelante (Forward chaining)**: Partimos de los hechos para llegar a una conclusión (Razonamiento deductivo).
+    * **Encadenamiento hacia atrás (Backward chaining)**: Partimos de un objetivo y buscamos los hechos que lo justifican (Razonamiento inductivo).
+
+---
+
+### 5. Técnicas de Representación Lógica
+Para codificar el conocimiento de forma interpretable por la máquina, utilizamos diferentes sistemas formales:
+
+| Técnica | Descripción | Ejemplo |
+| :--- | :--- | :--- |
+| **Lógica de 1er orden** | Utiliza cuantificadores y predicados. | `∀x (Humano(x) → Mortal(x))` |
+| **Lógica Proposicional** | Conecta proposiciones simples con operadores. | `P → Q` (Si llueve, el suelo se moja) |
+| **Lógica Difusa** | Gestiona incertidumbres o grados de verdad (entre 0 y 1). | "La temperatura es fresca" (0.75) |
+| **Ontologías** | Estructuras jerárquicas de clases y relaciones. | "Un gato es un tipo de mamífero" |
+
+---
+
+### 6. Aplicaciones Reales
+Estos modelos se materializan en tecnologías que utilizamos diariamente:
+* **LLMs (Large Language Models)**: Como GPT o BERT, para procesar lenguaje natural.
+* **Sistemas de recomendación**: Como los de Netflix o Spotify.
+* **Visión por computador**: Detección de anomalías en radiografías o vehículos autónomos.
+* **Asistentes virtuales**: Siri, Alexa y Google Assistant.
+
+> **Conclusión**: La clave de la IA no es solo tener datos, sino saber cómo representarlos y qué estrategia de resolución (reglas, búsqueda o aprendizaje) es la más eficiente para cada problema.
